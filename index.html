@@ -10,18 +10,20 @@
 </head>
 
 <body>
-    <div id="cursor"></div>
+    <div class="cursor"></div>
     <div class="main">
         CURSOR
     </div>
 </body>
 <script>
+    const elem_cursor = document.querySelector(".cursor")
     document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener("mousemove", (e) => {
-            document.getElementById("cursor").style.left = e.pageX + 'px'
-            document.getElementById("cursor").style.top = e.pageY + 'px'
-            document.getElementById("cursor").style.transform = "translate(-50%, -50%)"
-        })
+            elem_cursor.style.left = e.pageX + 'px'
+            elem_cursor.style.top = e.pageY + 'px'
+            elem_cursor.style.transform = "translate(-50%, -50%)"
+        });
+
     });
 </script>
 
